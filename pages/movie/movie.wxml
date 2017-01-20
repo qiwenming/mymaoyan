@@ -3,7 +3,7 @@
 
 
 
-<scroll-view scroll-y="true" wx:for="{{movies}}">
+<scroll-view class='movie' scroll-y="true" wx:for="{{movies}}">
    <view class="movieImg">
     <image src="{{item.img}}"></image>
    </view>
@@ -14,7 +14,12 @@
        <image class="m3dimax" src="../../image/movie_3dimax.png" wx:if="{{item['3d'] && item.imax}}"></image>
        <image class="m3d" src="../../image/movie_3d.png" wx:elif="{{item['3d']}}"></image>
        <!--<image class="m2dimax" src="../../image/movie_3d.png" wx:elif="{{item.ver.indexOf('2D')>0}}"></image>-->
+
+       <text class="score" wx:if='{{item.preSale !== 1}}'>{{item.sc}}<text style='font-size:12px'>分</text></text>
+       <text class="wish" wx:else>{{item.wish}}<text style='font-size:12px'>人想看</text></text>
+
      </view>
+
    </view>
 </scroll-view>
 
