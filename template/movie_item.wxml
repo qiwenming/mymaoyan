@@ -1,0 +1,12 @@
+<template name="movie_item">
+  <view class="movieImg">
+    <image src="{{item.img}}"></image>
+   </view>
+
+   <view class="movieDetail">
+     <view class="movieTitle">
+       <text>{{item.nm}}</text>
+       <image src="../../image/movie_3d.png" wx:if="true"></image>
+     </view>
+   </view>
+</template>

@@ -1,0 +1,23 @@
+<!--pages/movie/movie.wxml-->
+<!--<import src="../../template/movie_item.wxml"/>-->
+
+
+
+<scroll-view scroll-y="true" wx:for="{{movies}}">
+   <view class="movieImg">
+    <image src="{{item.img}}"></image>
+   </view>
+
+   <view class="movieDetail">
+     <view class="movieTitle">
+       <text>{{item.nm}}</text>
+       <image class="m3dimax" src="../../image/movie_3dimax.png" wx:if="{{item['3d'] && item.imax}}"></image>
+       <image class="m3d" src="../../image/movie_3d.png" wx:elif="{{item['3d']}}"></image>
+       <!--<image class="m2dimax" src="../../image/movie_3d.png" wx:elif="{{item.ver.indexOf('2D')>0}}"></image>-->
+     </view>
+   </view>
+</scroll-view>
+
+
+<!--{{item.ver.toLowerCase().indexOf('2d')>0 && item.ver.toLowerCase().indexOf('imax')>0}}-->
+      
