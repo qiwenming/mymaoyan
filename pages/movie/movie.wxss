@@ -7,6 +7,7 @@
 	padding:10px;
 	display: flex;
 	font-size: 16px;
+	background-color: #dddddd
 }
 
 .top .position{
@@ -23,39 +24,51 @@
 }
 .top .search icon{
 	position: relative;
-	top:-2px;
-	left:-2px;
+	top:3px;
+	right:2px;
 }
+
+
 
 /*main*/
 .main{
 	margin-top:10px;
 }
 .movie {
-	padding:10px 0;
 	background-color:#fff;
 	height:100px;
-	
 }
+
+.movieItem{
+	padding: 20rpx 0rpx;
+	padding-right: 20rpx;
+	margin-left: 20rpx;
+	border-bottom: 1px solid #cccccc;
+}
+
 .movie .movieImg{
+	float: left;
 	height: 100px;
 }
 .movie image{
 	width:70px;
 	height:100px;
-	margin-right:10px;
+	margin-right:16rpx;
 }
 .movie .movieDetail{
 	flex:1;
 	position: relative;
-	padding-right:10px;
 }
 .movie title{
 	font-size:15px;
 }
 .movie .m3d{
-    width: 40rpx;
-    height: 40rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+.movie .m3dimax{
+	width: 80rpx;
+    height: 30rpx;
 }
 .movie .imax{
 	background-color:transparent;
@@ -67,18 +80,20 @@
 	float:right;
 	color:orange;
 	position: relative;
-	top:5px;
 }
 .movie .type,
 .movie .star,
 .movie .showInfo{
 	font-size:12px;
 	color:#999;
-	margin:5px 0;
+	margin:20rpx 0;
 	width:190px;
 	overflow: hidden;
 	white-space:nowrap; 
 	text-overflow: ellipsis;
+}
+.movie .showInfo{
+	color:#bbb;
 }
 .movie .buy{
 	float:right;
@@ -87,6 +102,7 @@
 	right:10px;
 }
 .loading{
+	margin-top: 10rpx;
 	text-align: center;
 	color:#999;
 	font-size:16px;

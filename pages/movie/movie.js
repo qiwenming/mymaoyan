@@ -6,14 +6,24 @@ Page({
     offset: 0,
     limit: 10,
     loading: false,
+    scrollHeight:0
   },
   onLoad:function(options){
     console.log(app.globalData.movieListUrl);
     this.loadMovie();
+    var that = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          scrollHeight:res.windowHeight
+        })
+      }
+    })
   },
   loadMovie:function(){
     var that =this;
     this.setData({loading:true})
+    wx.showNavigationBarLoading();
     wx.request({
       url: app.globalData.movieListUrl,
       data: {
@@ -32,12 +42,18 @@ Page({
         })
       },
       complete: function() {
-          this.setData({loading:false})
+          that.setData({loading:false})
+          wx.hideNavigationBarLoading();
       }
     })
   },
   is2dImax:function(str){
     str = str.toLowerCase();
     return (str.indexOf('2d') && str.indexOf('imax') );
+  },
+  //上拉加载
+  scrolltolower:function(){
+    this.setData({loading:true});
+    this.loadMovie();
   }
 })

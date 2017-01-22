@@ -1,2 +1,8 @@
 <!--pages/cinema/cinema.wxml-->
-<text>pages/cinema/cinema.wxml</text>
+
+<view wx:for="{{cinemaData}}">
+  <view class="item" wx:for="{{item.data}}" wx:for-item="dataItem">
+    <view class="title">{{dataItem.nm}}</view>
+    <view class="address">{{dataItem.addr}}</view>
+  </view>
+</view>

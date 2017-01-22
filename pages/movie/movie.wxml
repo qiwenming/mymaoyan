@@ -1,28 +1,49 @@
+
 <!--pages/movie/movie.wxml-->
+
 <!--<import src="../../template/movie_item.wxml"/>-->
 
 
+<scroll-view class='movie' scroll-y="true" bindscrolltolower="scrolltolower" style="height:{{scrollHeight}}px">
 
-<scroll-view class='movie' scroll-y="true" wx:for="{{movies}}">
-   <view class="movieImg">
-    <image src="{{item.img}}"></image>
-   </view>
+  <view class='top'>
+		<view class='position'>
+			<text>上海</text>
+		</view>
+		<view class='search'>
+			<view><icon type='search' size='18' />找影视剧、影院</view>
+		</view>
+	</view>
 
-   <view class="movieDetail">
-     <view class="movieTitle">
-       <text>{{item.nm}}</text>
-       <image class="m3dimax" src="../../image/movie_3dimax.png" wx:if="{{item['3d'] && item.imax}}"></image>
-       <image class="m3d" src="../../image/movie_3d.png" wx:elif="{{item['3d']}}"></image>
-       <!--<image class="m2dimax" src="../../image/movie_3d.png" wx:elif="{{item.ver.indexOf('2D')>0}}"></image>-->
+  <navigator url="./detail/detail?movieId={{item.id}}" class="movieItem" wx:for="{{movies}}" >
+    <view class="movieImg">
+      <image src="{{item.img}}"></image>
+    </view>
+    <view class="movieDetail">
+      <view class="movieTitle">
+        <text>{{item.nm}}</text>
+        <image class="m3dimax" src="../../image/movie_3dimax.png" wx:if="{{item['3d'] && item.imax}}"></image>
+        <image class="m3d" src="../../image/movie_3d.png" wx:elif="{{item['3d']}}"></image>
 
-       <text class="score" wx:if='{{item.preSale !== 1}}'>{{item.sc}}<text style='font-size:12px'>分</text></text>
-       <text class="wish" wx:else>{{item.wish}}<text style='font-size:12px'>人想看</text></text>
+        <!--<image class="m2dimax" src="../../image/movie_3d.png" wx:elif="{{item.ver.indexOf('2D')>0}}"></image>-->
+        <text class="score" wx:if='{{item.preSale !== 1}}'>{{item.sc}}<text style='font-size:12px'>分</text>
+        </text>
+        <text class="wish" wx:else>{{item.wish}}<text style='font-size:12px;'>人想看</text>
+        </text>
+      </view>
 
-     </view>
+      <view class="type">{{item.cat}}</view>
+      <view class="star">主演:{{item.star}}</view>
+      <view class="showInfo">{{item.showInfo}}</view>
 
-   </view>
+	<button type='warn' size='mini' class='buy' wx:if='{{item.preSale !== 1}}'>购买</button>
+					<button type='warn' size='mini' style='background: #007fef' class='buy' wx:else>预售</button>
+
+    </view>
+  </navigator>>
+
+<view wx:if="{{loading}}" class="loading">正在加载中...</view>
+
 </scroll-view>
 
-
 <!--{{item.ver.toLowerCase().indexOf('2d')>0 && item.ver.toLowerCase().indexOf('imax')>0}}-->
-      
