@@ -1,0 +1,16 @@
+<template name="detail_cmt_item">
+	<view class="cmtItem">
+	<view class="circleImg">
+		<image src="{{avatarurl}}"/>
+	</view>
+	<view class="cmtItemTextP">
+		<view class="cmtItemNNM">{{nickName}} <text style="color:orange;font-size:12px;">{{score}}分</text></view>
+		<text class="cmtItemContent">{{content}}</text>
+
+		 <view class="cmtItemFolder">
+     	   <text>{{time}}</text>
+     	   <view><image src="../../../image/dz.png"/>{{approve}}</view>
+         </view>
+	</view>
+	</view>
+</template>

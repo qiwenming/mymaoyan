@@ -1,3 +1,47 @@
 
+<import src="../../../template/detail_cmt_item.wxml"/>
 
-{{movieId}}
+<view class="titleBg" style="background-image:url('{{movieDetail.img}}')">
+</view>
+<view class="title">
+  <view class="titleContent">
+    <image class="imgDetail" src="{{movieDetail.img}}"></image>
+    <view class="titleRight">
+      <view class="movieNm">{{movieDetail.nm}}</view>
+      <view class="movieSc" wx:if="{{movieDetail.preSale==1}}">{{movieDetail.wish}}人想看</view>
+      <view class="movieSc" wx:else>评分：{{movieDetail.sc}}</view>
+      <image class="imax" src="../../../image/imax.png" wx:if="{{ movieDetail.imax}}"></image>
+      <view class="movieDur">{{movieDetail.src}}/{{movieDetail.dur}}分钟</view>
+      <view class="movieRt">{{movieDetail.rt}}</view>
+    </view>
+  </view>
+  <view class="titleControl">
+    <button class="btnWish">
+      <image class="imgWish" src="../../../image/heart_gray.png"></image> 想看</button>
+    <button class="btnSc">
+      <image class="imgSc" src="../../../image/wjx_h.png"></image> 评分</button>
+  </view>
+</view>
+
+<view style="background-color:#dddddd">
+  <view class="detail">
+     <view class="text">
+     <text style='{{hideText ? "-webkit-line-clamp: 2" : ""}}'>{{movieDetail.dra}}</text>
+     </view>
+     <view class="btnParent">
+     <view class='btnComm , {{btnClass}}' bindtap="hiddeBtn"></view>
+     </view>
+  </view>
+
+<view class="cmtDiving">观众评论</view>
+<scroll-view>
+  <block wx:for="{{hcmts}}">
+    <template is="detail_cmt_item" data="{{...item}}"></template>
+  </block>
+</scroll-view>
+
+ <view class='buy'>
+    <text>优惠购买</text>
+  </view>
+
+</view>
