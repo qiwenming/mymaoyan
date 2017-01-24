@@ -7,7 +7,8 @@ Page({
     movieDetail:{},
     hideText:true,
     btnClass:'btnDown',
-    hcmts:[]
+    hcmts:[],
+    total:0
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -31,7 +32,8 @@ Page({
         res.data.data.MovieDetailModel.dra = dra.replace('<p>','').replace('</p>','')
         that.setData({
           movieDetail:res.data.data.MovieDetailModel,
-          hcmts:res.data.data.CommentResponseModel.hcmts
+          hcmts:res.data.data.CommentResponseModel.hcmts,
+          total:res.data.data.CommentResponseModel.total
         })
       }
     })

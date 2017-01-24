@@ -1,0 +1,120 @@
+/* pages/cinema/detail/detail.wxss */
+.nmAddress{
+	padding:20rpx;
+}
+
+.nm{
+
+}
+
+.address{
+	margin-top: 10rpx;
+  font-size:26rpx;
+  color:#999999;
+}
+
+.movieDetail{
+
+}
+.movieItem,image{
+	width:100rpx;
+	height: 140rpx;
+}
+
+.currentMovie{
+	width: 100%;
+	margin:auto;
+}
+
+.currentMovie .title{
+	text-align: center;
+}
+
+.currentMovie .address{
+	text-align: center;
+}
+.dateScrollP{
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.dateScroll{
+	white-space: nowrap;
+	display:flex;
+	overflow-y:hidden;
+	padding-top:20rpx;
+	padding-bottom:20rpx;
+	border-bottom:1px solid #cccccc;
+	border-top:1px solid #cccccc;
+}
+.dateScroll .dateItem{
+	display:inline-block;
+	/*flex-direction:row;*/
+}
+
+.dateScroll .dateItemSelect{
+	display:inline-block;
+	/*flex-direction:row;*/
+	border-bottom: 3px solid #dd4021;
+}
+
+
+.dateScroll .dateClass{
+  flex-direction:row;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  padding: 10rpx;
+}
+
+.ccScroll{
+	padding-left: 20rpx;
+}
+
+.cc_item{
+	line-height: 40rpx;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+	border-bottom:1px solid #cccccc;
+	display:flex;
+}
+
+.cc_item .cc_item_time{
+	margin-left: 10rpx;
+	flex-direction:row;
+}
+
+.cc_item .cc_start_time{
+	
+}
+
+.cc_item .cc_end_time{
+	color: #999999;
+	font-size: 26rpx;
+}
+
+.cc_item .cc_item_tpth{
+	margin-left: 100rpx;
+	flex-direction:row;
+}
+
+.cc_item .cc_langtp{
+	font-size: 30rpx;
+}
+
+.cc_item .cc_th{
+	color: #999999;
+	font-size: 26rpx;
+}
+
+.cc_item .buy{
+	position: absolute;
+	font-size: 30rpx;
+	float: right;
+	margin-right: 20rpx;
+	height: 60rpx;
+	width: 180rpx;
+	right:30rpx;
+}
+

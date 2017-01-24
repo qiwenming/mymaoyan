@@ -120,6 +120,7 @@
   border-radius: 50%;
 }
 .cmtItemTextP{
+  width: 100%;
   margin-left:20rpx;
   padding-bottom: 20rpx;
   border-bottom: 1px solid #cccccc;
@@ -150,6 +151,23 @@
   width: 30rpx;
   height: 30rpx;
 }
+.seeAll{
+  margin-top: 30rpx;
+  padding: 20rpx;
+  text-align: center;
+  background-color: white;
+  color:#dd4021;
+  width: 100%;
+  margin-bottom: 110rpx;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+}
 .buy{
   background-color: #dd4021;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 20rpx;
+  color:white;
 }

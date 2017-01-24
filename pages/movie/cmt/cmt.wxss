@@ -1,0 +1,57 @@
+/* pages/movie/cmt/cmt.wxss */
+.cmtDiving{
+  background-color: white;
+  margin-top: 40rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+}
+.cmtItem{
+  background-color: white;
+  padding-top: 20rpx;
+  display: flex;
+}
+.circleImg image{
+  margin-left: 20rpx;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.cmtItemTextP{
+  width: 100%;
+  margin-left:20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.cmtItemNNM{
+  font-size: 14px;
+  font-weight:bold;
+  margin-bottom: 20rpx;
+}
+.cmtItemContent{
+
+}
+
+.cmtItemFolder{
+  /*display: flex;*/
+  color: #cccccc;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+.cmtItemFolder text{
+   float: left;
+}
+.cmtItemFolder view{
+   float: right;
+}
+.cmtItemFolder image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.loading{
+	margin-top: 10rpx;
+	text-align: center;
+	color:#999;
+	font-size:16px;
+}

@@ -40,6 +40,10 @@
   </block>
 </scroll-view>
 
+ <navigator url="../cmt/cmt?movieId={{movieId}}" class='seeAll'>
+    <text>查看全部{{total}}条观众评论</text>
+  </navigator>
+
  <view class='buy'>
     <text>优惠购买</text>
   </view>

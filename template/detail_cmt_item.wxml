@@ -1,3 +1,4 @@
+
 <template name="detail_cmt_item">
 	<view class="cmtItem">
 	<view class="circleImg">

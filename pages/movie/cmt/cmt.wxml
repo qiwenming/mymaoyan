@@ -1,0 +1,10 @@
+<!--pages/movie/cmt/cmt.wxml-->
+<import src="../../../template/detail_cmt_item.wxml"/>
+<view class="cmtDiving">所有评论（{{total}}）条</view>
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px" bindscrolltolower="scrolltolower">
+  <block wx:for="{{hcmts}}">
+    <template is="detail_cmt_item" data="{{...item}}"></template>
+  </block>
+
+ <view wx:if="{{loading}}" class="loading">正在加载中...</view>
+</scroll-view>

@@ -1,0 +1,36 @@
+
+<import src="../../../template/detail_cc_item.wxml"/>
+
+<view class="nmAddress">
+	<view class="nm">{{cinemaData.cinemaDetailModel.nm}}</view>
+	<view class="address">{{cinemaData.cinemaDetailModel.addr}}</view>
+</view>
+
+<view class="movieDetail">
+   <swiper>
+   	 <block wx:for="{{cinemaData.movies}}">
+   	 	<swiper-item class="movieItem">
+   	 	   <image src="{{item.img}}"></image>
+   	 	</swiper-item>
+   	 </block>
+   </swiper>
+</view>
+
+<view class="currentMovie">
+	<view class="title">{{cinemaData.currentMovie.nm}}  <text style="color:orange">{{cinemaData.currentMovie.sc}}<text style="font-size:24rpx">分</text></text></view>
+	<view class="address">{{cinemaData.currentMovie.ver}}</view>
+</view>
+<scroll-view class="dateScroll" scroll-x="true">
+   <view wx:for="{{cinemaData.Dates}}" class="{{curDate==item.slug?'dateItemSelect':'dateItem'}}">
+   	 <view class="dateClass" data-date="{{item}}" bindtap="clickDate">{{item.text}}</view>
+   </view>
+</scroll-view>
+
+
+<scroll-view class="ccScroll" scroll-y="true">
+   <block wx:for="{{curCcs}}">
+   	 <template is="detail_cc_item" data="{{...item}}"></template>
+   </block>
+</scroll-view>
+
+

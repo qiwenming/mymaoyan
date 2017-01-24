@@ -3,7 +3,9 @@
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
-    "pages/movie/detail/detail"
+    "pages/movie/detail/detail",
+    "pages/movie/cmt/cmt",
+    "pages/cinema/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

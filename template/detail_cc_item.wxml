@@ -1,0 +1,13 @@
+<template name="detail_cc_item">
+	<view class="cc_item">
+		<view class="cc_item_time">
+			<view class="cc_start_time">{{tm}}</view>
+			<view class="cc_end_time">{{end}}散场</view>
+		</view>
+		<view class="cc_item_tpth">
+			<view class="cc_langtp">{{lang}}{{tp}}</view>
+			<view class="cc_th">{{th}}</view>
+		</view>
+		<button type='warn' size='mini' class="buy">购票</button>
+	</view>
+</template>
