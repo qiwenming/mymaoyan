@@ -7,13 +7,13 @@
 </view>
 
 <view class="movieDetail">
-   <swiper>
+   <scroll-view class="movieScroll" scroll-x="true">
    	 <block wx:for="{{cinemaData.movies}}">
-   	 	<swiper-item class="movieItem">
+   	 	<view class="movieItem">
    	 	   <image src="{{item.img}}"></image>
-   	 	</swiper-item>
+   	 	</view>
    	 </block>
-   </swiper>
+   </scroll-view>
 </view>
 
 <view class="currentMovie">

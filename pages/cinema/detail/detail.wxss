@@ -16,7 +16,16 @@
 .movieDetail{
 
 }
-.movieItem,image{
+.movieScroll{
+	white-space: nowrap;
+	display:flex;
+	overflow-y:hidden;
+}
+.movieItem{
+	display:inline-block;
+}
+
+image{
 	width:100rpx;
 	height: 140rpx;
 }
