@@ -1,2 +1,18 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="mineMain">
+   <block wx:for="{{items}}">
+        <view class="dving"></view>
+   	  <view class="maxItem">
+   	  	 <block wx:for="{{item}}" wx:for-item="smallItem" wx:for-index="index">
+   	  	 	<view bindtap="smallItemClick" data-item="{{smallItem}}" class="{{item.length-1==index?'smallItemLast':'smallItem'}}">
+   	  	 		<view class="title">{{smallItem.title}}</view>
+   	  	 		<image src="../../image/arrow_right.png"></image>
+   	  	 	</view>
+   	  	 </block>
+   	  </view>
+   </block>
+
+   <view class="server">
+      <text class="description">猫眼电影 客服电话: </text> <text bindtap="callPhone" class="phone" data-phone="10105335">1010-5335</text>
+   </view>
+
+</view>

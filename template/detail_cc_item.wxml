@@ -1,5 +1,5 @@
 <template name="detail_cc_item">
-	<view class="cc_item">
+	<navigator class="cc_item" url="../seat/seat?showId={{showId}}&showDate={{showDate}}">
 		<view class="cc_item_time">
 			<view class="cc_start_time">{{tm}}</view>
 			<view class="cc_end_time">{{end}}散场</view>
@@ -9,5 +9,5 @@
 			<view class="cc_th">{{th}}</view>
 		</view>
 		<button type='warn' size='mini' class="buy">购票</button>
-	</view>
+	</navigator>
 </template>

@@ -18,9 +18,11 @@ Page({
       movieId:movieId,
       isPreSale:isPreSale
     })
+     app.showLoading();
     this.loadDetail(movieId);
   },
   loadDetail:function(movieId){
+     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
       url: app.globalData.movieDetialUrl.replace('qwm',movieId),
@@ -35,6 +37,10 @@ Page({
           hcmts:res.data.data.CommentResponseModel.hcmts,
           total:res.data.data.CommentResponseModel.total
         })
+      },
+      complete:function(){
+         wx.hideToast();
+          wx.hideNavigationBarLoading();
       }
     })
   },
@@ -44,6 +50,13 @@ Page({
     this.setData({
       btnClass:hidClass,
       hideText:hidText
+    })
+  },
+  buy:function(){
+    app.globalData.tempMovieId = this.data.movieId;
+    console.log(app.globalData.tempMovieId);
+    wx.switchTab({
+      url:'../../cinema/cinema'
     })
   }
 })

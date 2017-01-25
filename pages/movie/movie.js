@@ -10,6 +10,7 @@ Page({
   },
   onLoad:function(options){
     console.log(app.globalData.movieListUrl);
+    app.showLoading();
     this.loadMovie();
     var that = this;
     wx.getSystemInfo({
@@ -44,6 +45,7 @@ Page({
       complete: function() {
           that.setData({loading:false})
           wx.hideNavigationBarLoading();
+          wx.hideToast();
       }
     })
   },
@@ -55,5 +57,13 @@ Page({
   scrolltolower:function(){
     this.setData({loading:true});
     this.loadMovie();
+  },
+  buyStick:function(e){
+    var movieid = e.currentTarget.dataset['movieid'];
+    app.globalData.tempMovieId = movieid;
+    console.log(app.globalData.tempMovieId);
+    wx.switchTab({
+      url:'../cinema/cinema'
+    })
   }
 })

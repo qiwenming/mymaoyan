@@ -15,6 +15,7 @@ Page({
   onLoad:function(options){
      var movieId = options['movieId'];
       var that = this;
+      app.showLoading();
      this.setData({
      	movieId:movieId
      });
@@ -53,6 +54,7 @@ Page({
       complete: function() {
           that.setData({loading:false})
           wx.hideNavigationBarLoading();
+          wx.hideToast();
       }
     })
 },

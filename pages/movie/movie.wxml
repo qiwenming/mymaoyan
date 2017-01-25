@@ -36,8 +36,8 @@
       <view class="star">主演:{{item.star}}</view>
       <view class="showInfo">{{item.showInfo}}</view>
 
-	<button type='warn' size='mini' class='buy' wx:if='{{item.preSale !== 1}}'>购买</button>
-					<button type='warn' size='mini' style='background: #007fef' class='buy' wx:else>预售</button>
+	<button data-movieId="{{item.id}}" catchtap="buyStick" type='warn' size='mini' class='buy' wx:if='{{item.preSale !== 1}}'>购买</button>
+					<button data-movieId="{{item.id}}" catchtap="buyStick" type='warn' size='mini' style='background: #007fef' class='buy' wx:else>预售</button>
 
     </view>
   </navigator>

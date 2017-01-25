@@ -1,1 +1,51 @@
 /* pages/mine/mine.wxss */
+.mineMain{
+	background-color: #f0f0f0;
+	height: 1300rpx;
+}
+
+.dving{
+	height: 30rpx;
+	width: 100%;
+}
+.maxItem{
+	background-color: white;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.smallItem{
+	display: flex;
+	padding: 20rpx;
+	padding-left: 0px;
+	margin-left: 20rpx;
+	border-bottom: 1px solid #cccccc;
+}
+.smallItemLast{
+	display: flex;
+	padding: 20rpx;
+	padding-left: 0px;
+	margin-left: 20rpx;
+}
+.title{
+	flex:1;
+}
+
+image{
+	width: 25rpx;
+	height: 40rpx;
+}
+
+.server{
+	margin-top: 500rpx;
+	text-align: center;
+}
+
+.server .description{
+	color: #bbbbbb;
+}
+
+.server .phone{
+	color: orange;
+	text-decoration:underline;
+}

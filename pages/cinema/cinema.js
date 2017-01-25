@@ -5,15 +5,24 @@ Page({
     requestObj:{
       cityId:10,
       limit:10,
-      offset:0
+      offset:0,
+      movieId:undefined
     },
     cinemaData:[]
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    var movieId = app.globalData.tempMovieId;
+    // app.globalData.tempMovieId = undefined;
+    console.log("movieid:"+movieId);
+    this.setData({
+      movieId:movieId
+    })
+    app.showLoading();
     this.loadCinema();
   },
   loadCinema:function(){
+     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
       url: app.globalData.cinemaListUrl,
@@ -31,6 +40,10 @@ Page({
         that.setData({
           cinemaData:that.globalData.tempCinemas
         })
+      },
+      complete:function(){
+        wx.hideNavigationBarLoading();
+        wx.hideToast();
       }
     })
   },

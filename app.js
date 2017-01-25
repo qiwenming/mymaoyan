@@ -31,8 +31,17 @@ App({
     movieDetialUrl:'http://m.maoyan.com/movie/qwm.json',
     commentsUrl:'http://m.maoyan.com/comments.json',
     cinemaListUrl:'http://m.maoyan.com/cinemas.json',
-    cinemaDetialUrl:'http://m.maoyan.com/showtime/wrap.json?',
-    seatsUrl:'http://m.maoyan.com/show/seats'
+    cinemaDetialUrl:'http://m.maoyan.com/showtime/wrap.json',
+    seatsUrl:'http://m.maoyan.com/show/seats',
 
+    tempMovieId:undefined
+
+  },
+  showLoading:function(){
+    wx.showToast({
+        title: '加载中...',
+        icon: 'loading',
+        duration: 10000
+    })
   }
 })

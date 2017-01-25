@@ -6,11 +6,13 @@
 	<view class="address">{{cinemaData.cinemaDetailModel.addr}}</view>
 </view>
 
+<view class="movieDetailBg" style="background-image:url('{{currentMovie.img}}')"></view>
+
 <view class="movieDetail">
    <scroll-view class="movieScroll" scroll-x="true">
    	 <block wx:for="{{cinemaData.movies}}">
-   	 	<view class="movieItem">
-   	 	   <image src="{{item.img}}"></image>
+   	 	<view class="movieItem" bindtap="selectMovie" data-movie="{{item}}">
+   	 	   <image class="{{movieId==item.id?'imageItemSelect':'imageItem'}}" src="{{item.img}}"></image>
    	 	</view>
    	 </block>
    </scroll-view>

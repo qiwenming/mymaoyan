@@ -1,0 +1,124 @@
+/* pages/cinema/seat/seat.wxss */
+/*标题*/
+.title{
+	margin: 20rpx;
+	padding-bottom: 20rpx;
+	border-bottom: 1px solid #cccccc;
+}
+
+.title .cinemaName{
+
+}
+
+
+.title .description{
+	margin-top: 10rpx;
+	font-size: 26rpx;
+	color: #cccccc;
+}
+
+/*座位说明*/
+.seatDes{
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+.seatDes .seatDesAble{
+	margin: auto;
+	display: inline-block;
+	line-height: 40rpx;
+	text-align: center;
+}
+
+.seatDes .seatDesSaled{
+	margin: auto;
+	display: inline-block;
+	line-height: 40rpx;
+	text-align: center;
+}
+
+.seatDes .seatDesSelect{
+	margin: auto;
+	display: inline-block;
+	line-height: 40rpx;
+	text-align: center;
+}
+
+.seatDes image{
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.seatDes text{
+	padding-right: 30rpx;
+	margin-left: 6rpx;
+	text-align: center;
+	font-size: 26rpx;
+}
+.seatSelect{
+   margin-top: 100rpx;
+   width: 100%;
+    border-top: 1px solid #cccccc;
+   background-color:rgba(128,128,128,0.2);
+}
+scroll-view{
+  height: 800rpx;
+  width: 100%;
+  border-bottom:1px solid #cccccc;
+}
+
+.hallName{
+	background-size: 100% 100%;
+	height: 40rpx;
+	width: 400rpx;
+	font-size: 28rpx;
+	padding: 10rpx;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-image:url('../../../../image/seat_bg.png');
+	margin:auto;
+}
+
+.tr{
+	display:flex;
+}
+.tr .rowIdP{
+  position: flex;
+}
+.tr .rowId{
+	text-align: center;
+	width: 40rpx;
+	background-color: #dddddd;
+	/*position: flex;*/
+}
+
+.tr .td{
+	display: inline-block;
+}
+
+.tr .td view{
+	background-size: 100% 100%;
+	width: 30rpx;
+	height: 30rpx;
+	padding: 8rpx;
+}
+
+/*空的*/
+.tr .td .typeE{
+}
+
+/*可选*/
+.tr .typeN{
+	background-image:url('../../../../image/seat_gray.png');
+}
+
+/*已售*/
+.tr .typeLK{
+	background-image:url('../../../../image/seat_red.png');
+}
+
+/*已选*/
+.tr .typeSelect{
+	background-image:url('../../../../image/seat_green.png');
+}

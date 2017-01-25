@@ -1,0 +1,90 @@
+
+
+.main{
+	height: 1300rpx;
+	background-color: #f0f0f0;
+}
+
+.inputAll{
+	background-color: white;
+}
+
+.loginType{
+	display:flex;
+}
+
+.loginType .loginTab{
+	flex:1;
+	padding: 20rpx;
+	text-align: center;
+	color: #999999;
+	border-bottom: 2rpx solid #cccccc;
+}
+
+.loginTabSelected{
+	flex:1;
+	padding: 20rpx;
+	text-align: center;
+	color: #dd4021;
+	border-bottom: 5rpx solid #dd4021;
+}
+
+.loginTabBody{
+	padding-left: 20rpx;
+}
+
+.account{
+	display: flex;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+	border-bottom: 1rpx solid #cccccc;
+	line-height: 60rpx;
+}
+.account input{
+	margin-left: 20rpx;
+}
+
+.pwd{
+	display: flex;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+	line-height: 60rpx;
+}
+.pwd input{
+	margin-left: 20rpx;
+}
+
+button{
+	margin: 20rpx;
+	margin-top: 40rpx;
+	color: white;
+	background-color:rgba(221,64,33,0.4);
+}
+.otherLogin{
+	color: #999999;
+	margin-top: 140rpx;
+	width: 100%;
+	text-align: center;
+}
+.threeLogin{
+	text-align: center;
+	display: flex;
+}
+
+.threeLoginItem{
+	margin-top: 20rpx;
+	padding: 20rpx;
+	margin: auto;
+}
+
+.threeLoginItem image{
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.threeLoginItem view{
+	text-align: center;
+    margin: 2rpx;
+	color: #232323;
+	font-size: 30rpx;
+}

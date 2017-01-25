@@ -1,19 +1,39 @@
 // pages/mine/mine.js
 Page({
-  data:{},
+  data:{
+    items:[
+      [
+        {title:'我的订单'},
+        {title:'优惠券'},
+        {title:'影院会员卡'}
+      ],
+      [
+         {title:'想看的电影'},
+         {title:'看过的电影'}
+      ]
+    ],
+    height:0
+  },
   onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+    var that = this;
+      wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          height:res.windowHeight
+        })
+      }
+    })
   },
-  onReady:function(){
-    // 页面渲染完成
+  callPhone:function(e){
+    var phone = e.currentTarget.dataset['phone'];
+    wx.makePhoneCall({
+      phoneNumber:phone
+    })
   },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
+  smallItemClick:function(e){
+    var item = e.currentTarget.dataset['item'];
+    wx.navigateTo({
+      url:'../login/login'
+    })
   }
 })

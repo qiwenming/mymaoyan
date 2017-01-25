@@ -1,0 +1,41 @@
+<view class="main">
+	<view class="inputAll">
+		<view class="loginType">
+			<view bindtap="swithTab" data-index="1" class="{{tabIndex==1?'loginTabSelected':'loginTab'}}">账号密码登录</view>
+			<view bindtap="swithTab" data-index="2" class="{{tabIndex!=1?'loginTabSelected':'loginTab'}}">手机号快捷登录</view>
+		</view>
+		<view wx:if="{{tabIndex==1}}" class="loginTabBody">
+			<view class="account">
+				<view>账号</view>
+				<input type="text" placeholder="请输入账号"/>
+			</view>
+			<view class="pwd">
+				<view>密码</view>
+				<input type="text" placeholder="请输入密码"/>
+			</view>
+		</view>
+
+		 <view wx:else class="loginTabBody">
+			<view class="account">
+				<view>手机号</view>
+				<input type="number" placeholder="仅支持大陆手机号码"/>
+			</view>
+			<view class="pwd">
+				<text>验证码</text>
+				<input type="number" placeholder="请输入密码"/>
+			</view>
+		</view>
+
+	</view>
+
+	<button>登录</button>
+
+	<view class="otherLogin">---------其他方式登录---------</view>
+
+	<view class="threeLogin">
+		<view class="threeLoginItem" wx:for="{{threeLogins}}">
+			<image src="{{item.url}}"></image>
+			<view>{{item.text}}</view>
+		</view>
+	</view>
+</view>

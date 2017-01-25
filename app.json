@@ -3,9 +3,12 @@
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
+    "pages/login/login",
+  
     "pages/movie/detail/detail",
     "pages/movie/cmt/cmt",
-    "pages/cinema/detail/detail"
+    "pages/cinema/detail/detail",
+    "pages/cinema/seat/seat"
   ],
   "window":{
     "backgroundTextStyle":"light",

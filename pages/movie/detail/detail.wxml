@@ -44,7 +44,7 @@
     <text>查看全部{{total}}条观众评论</text>
   </navigator>
 
- <view class='buy'>
+ <view class='buy' bindtap="buy">
     <text>优惠购买</text>
   </view>
 

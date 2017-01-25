@@ -1,0 +1,15 @@
+<template name="seat_item">
+	<view class="tr">
+	  <view class="rowIdP">
+	  	  <view class="rowId">{{rowId}}</view>
+	  </view>
+	  <block wx:for="{{seats}}" wx:for-item="seatItem">
+		<view class="td" data-seat="{{seatItem}}" bindtap="selectSeat">
+          <view wx:if="{{seatItem.type=='E'}}" class="typeE"></view>
+          <view wx:elif="{{seatItem.type=='N'}}" class="typeN"></view>
+          <view wx:elif="{{seatItem.type=='LK'}}" class="typeLK"></view>
+          <view wx:elif="{{seatItem.type=='SELECTED'}}" class="typeSelect"></view>
+		</view>
+	  </block>
+	</view>
+</template>

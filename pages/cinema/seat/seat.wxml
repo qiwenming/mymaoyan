@@ -1,0 +1,32 @@
+<!--pages/cinema/seat/seat.wxml-->
+<import src="../../../template/seat_item.wxml"/>
+<view class="title">
+	<view class="cinemaName">{{seatData.showInfo.cinemaName}}</view>
+	<view class="description">{{seatData.showInfo.showTime}}  {{seatData.showInfo.lang}}{{seatData.showInfo.tp}}</view>
+</view>
+
+<view class="seatDes">
+	<view class="seatDesAble">
+		<image src="../../../../image/seat_gray.png"/>
+		<text>可选</text>
+	</view>
+	<view class="seatDesSaled">
+		<image src="../../../../image/seat_red.png"/>
+		<text>已售</text>
+	</view>
+	<view class="seatDesSelect">
+		<image src="../../../../image/seat_green.png"/>
+		<text>已选</text>
+	</view>
+</view>
+
+<view class="seatSelect">
+    <view class="ssTitle">
+    	<view class="hallName">{{seatData.showInfo.hallName}}</view>
+    </view>
+	<scroll-view scroll-x="true" scroll-y="true">
+	  <block wx:for="{{seats[0].seatRows}}">
+	  	<template is="seat_item" data="{{...item}}"></template>
+	  </block>
+	</scroll-view>
+</view>
